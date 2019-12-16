@@ -1,21 +1,19 @@
-import React from 'react';
-import { StyleSheet, Text, View, Input } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Input, Button, KeyboardAvoidingView } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 
-export default class Name extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {text: 'Placeholder Text'}
-  }
-
-  render () {
-    const inputAccessoryViewID = 'uniqueID';
-      return (
-      <View style={styles.container}>
-        <Text style={styles.textStyle}>Please enter the name of your cat:</Text>
-        {/* <Input type='text'/> */}
-      </View>
-    )
-  }
+export default function Name() {
+  const [value, onChangeText] = React.useState('Useless Placeholder');
+    return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+        <TextInput 
+        style={styles.textStyle}
+        placeholder="What is the name of your cat?"
+        onChangeText={text => onChangeText(text)}
+        value={value}
+        />
+      </KeyboardAvoidingView>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -16,7 +16,7 @@ export default class Homeview extends React.Component {
         <Text style={styles.textStyle}>Basic React Native App</Text>
         <Button 
           title='Enter'
-          onPress={() => navigate('Name', {name: 'Julie'})}
+          onPress={() => navigate('Name')}
          />
       </View>
     )
