@@ -13,7 +13,7 @@ const MainNavigator = createStackNavigator (
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: 'App'
+      title: 'PetList'
     }
   }
 );

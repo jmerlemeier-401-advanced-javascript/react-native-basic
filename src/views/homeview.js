@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
+
 export default class Homeview extends React.Component {
   static navigationOptions = {
     title: 'Welcome',
@@ -13,7 +14,7 @@ export default class Homeview extends React.Component {
           style={styles.image}
           source={require('../../assets/black_cat.png')}
           />
-        <Text style={styles.textStyle}>Basic React Native App</Text>
+        <Text style={styles.textStyle}>Monster Cat</Text>
         <Button 
           title='Enter'
           onPress={() => navigate('Name')}
@@ -37,7 +38,8 @@ const styles = StyleSheet.create({
   image: {
     width: 200,
     height:200,
-    resizeMode: 'stretch'
+    resizeMode: 'stretch',
+    justifyContent: 'center',
   },
 });
 
