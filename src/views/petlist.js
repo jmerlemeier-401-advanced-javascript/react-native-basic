@@ -22,8 +22,8 @@ const useFetch = (url, options) => {
 const PetList = () => {
   // const [data, setData] = useState({});
 
-  const res = useFetch("https://swapi.co/api/people/1/")
-  if (!res.response) return <Text>no response</Text>
+  const res = useFetch("https://swapi.co/api/people/")
+  if (!res.response) return <Text>loading...</Text>
 
 
   // useEffect(() => {
@@ -45,11 +45,11 @@ const PetList = () => {
   return (
     <View style={styles.list}>
       <Text style={styles.title}>List of Pets</Text>
-      <Text>name: {res.response.name}</Text>
-      <Text>species: {res.response.species}</Text>
-      {/* <FlatList 
+      {/* <Text>name: {res.response.name}</Text>
+      <Text>species: {res.response.species}</Text> */}
+      <FlatList 
         keyExtractor={item => item.name}
-        data={res.response}
+        data={res.response.results}
         renderItem={({ item }) => {
           return (
             <Text style={styles.textStyle}>
@@ -57,7 +57,7 @@ const PetList = () => {
             </Text>
           )
         }}
-      /> */}
+      />
     </View>
   );
 }
