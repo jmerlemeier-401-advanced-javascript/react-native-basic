@@ -20,33 +20,15 @@ const useFetch = (url, options) => {
 }
 
 const PetList = () => {
-  // const [data, setData] = useState({});
 
   const res = useFetch("https://swapi.co/api/people/")
   if (!res.response) return <Text>loading...</Text>
 
 
-  // useEffect(() => {
-  //   async function fetchData () {
-  //     // setData({test: 'test'});
-  //     try {
-  //       const response = await fetch('https://swapi.co/api/people/1/')
-  //       const result = await response.json();
-  //       console.log('result was hit!', result)
-  //       setData(result);
-  //       console.log('data was updated', data)
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }
-  //   fetchData()
-  // }, [])
-
   return (
     <View style={styles.list}>
       <Text style={styles.title}>List of Pets</Text>
-      {/* <Text>name: {res.response.name}</Text>
-      <Text>species: {res.response.species}</Text> */}
+      
       <FlatList 
         keyExtractor={item => item.name}
         data={res.response.results}

@@ -27,19 +27,20 @@ export default class Homeview extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    color: '#272E41',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   textStyle: {
     fontSize: 30,
-   color: 'teal',
+   color: '#272E41',
   },
   image: {
     width: 200,
     height:200,
     resizeMode: 'stretch',
     justifyContent: 'center',
-  },
+  }
 });
 
