@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Input, Button, KeyboardAvoidingView, Text } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-// import SessionTimerModal, { startSessionTimer, stopSessionTimer } from 'react-native-session-timer-modal';
 
 import Timer from '../components/timer.js';
 
@@ -10,13 +9,8 @@ export default (props) => {
   const {navigate} = props.navigation;
   console.log(value);
 
-  // useEffect(() => {
-  //   startSessionTimer();
-  // });
-
     return (
       <>
-      {/* <SessionTimerModal> */}
         <KeyboardAvoidingView 
           style={styles.container} 
           behavior="padding" enabled>
@@ -32,7 +26,6 @@ export default (props) => {
             onPress={() => navigate('PetList')} //and => stopSessionTimer()!!!!!!!!!
         /> 
         <Timer/>
-       {/* </SessionTimerModal> */}
       </> 
     );
 }
